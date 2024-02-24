@@ -1,0 +1,125 @@
+:root {
+  --yellow-color: hsl(47, 88%, 63%);
+  --white-color: hsl(0, 0%, 100%);
+  --grey-color: hsl(0, 0%, 50%);
+  --black-color: hsl(0, 0%, 7%);
+
+  font-family: 'Figtree', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--yellow-color);
+  color: var(--black-color);
+}
+
+main {
+  padding: 16px;
+}
+
+.card {
+  padding: 0 8px 8px 0;
+  border-radius: 16px;
+}
+
+.card__wrapper {
+  padding: 16px;
+  border: 1px solid black;
+  border-radius: 16px;
+  background-color: var(--white-color);
+  box-shadow: 8px 8px black;
+}
+
+.card__image {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card__learning-button {
+  margin-top: 24px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  background-color: var(--yellow-color);
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.card__publish-date {
+  margin-top: 14px;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.card__title {
+  margin-top: 16px;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.card__title:hover {
+  color: var(--yellow-color);
+  cursor: pointer;
+  transition: color 300ms ease-in-out;
+}
+
+.card__description {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--grey-color);
+}
+
+.card__creator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.card__creator-image {
+  width: 32px;
+  height: 32px;
+  border-radius: 99px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card__creator-name {
+  font-weight: 800;
+  font-size: 14px;
+}
+
+@media (min-width: 375px) {
+  .card__wrapper {
+    max-width: 384px;
+  }
+
+  .card__learning-button,
+  .card__publish-date {
+    font-size: 14px;
+  }
+
+  .card__title {
+    font-size: 24px;
+  }
+
+  .card__description {
+    font-size: 16px;
+  }
+}
